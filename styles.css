@@ -1,3 +1,72 @@
+body {
+  margin: 0 auto;
+  height: 100vh;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: aliceblue;
+}
+header {
+  border-bottom: 1px solid grey;
+  margin-bottom: 20px;
+  background-color: beige;
+  height: 60px;
+}
 h1 {
-  color: red;
+  padding-top: 8px;
+  margin: 0;
+  color: cadetblue;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.container-question {
+  width: 260px;
+  padding: 16px 30px;
+  margin-bottom: 16px;
+  border: 1px solid grey;
+  text-align: center;
+}
+.question {
+  padding: 20px;
+}
+.button-answer {
+  font-size: 16px;
+  text-align: center;
+  align-self: center;
+  color: #fff;
+  padding: 8px;
+  background-color: cadetblue;
+}
+.container-padding {
+  padding: 16px 30px;
+}
+.bookmarks {
+  display: flex;
+  padding-top: 16px;
+}
+.hashtag-frontend {
+  margin-right: 6px;
+  padding: 3px 6px;
+  border: 1px solid gainsboro;
+  border-radius: 20%;
+  background-color: beige;
+  color: cadetblue;
+}
+footer {
+  background-color: cadetblue;
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  bottom: 0;
+  border-top: 1px solid grey;
+}
+.navbar {
+}
+.navbar-ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+li {
+  color: antiquewhite;
+  padding-right: 20px;
+  font-size: 20px;
 }
