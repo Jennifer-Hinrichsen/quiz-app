@@ -7,37 +7,54 @@
     <title>Quiz App</title>
   </head>
   <body>
-    <header>
-      <div class="header-box"><h1>Quiz App</h1></div>
-  </header>
-  <section>
-    <div class="container-padding">
-    <article class="container-question">
-      <p class="question">What property flips the axes in flexbox?</p>
-      <button class="button-answer">Show answer
-        </button>
-        <div class="bookmarks">
-          <p><a  class="hashtag-frontend" href="#test">#html</a></p>
-          <p><a class="hashtag-frontend" href="#test">#flexbox</a></p>
-          <p><a class="hashtag-frontend" href="#test">#css</a></p>
-        </div>
-    </article>
-    <article class="container-question">
-      <p class="question">Lorem Ipsum dolor sit?</p>
-      <button class="button-answer">Show answer
-      </button>
-    </article>
-  </div>
-    </div>
-  </section>
-  <footer>
-    <div class="navbar">
-      <ul class="navbar-ul">
-        <li><link rel="stylesheet" href="styles.css">Home</li>
-        <li><link rel="stylesheet" href="styles.css">Bookmark</li>
-        <li><link rel="stylesheet" href="styles.css">Profile</li>
+    <header class="title">
+      <h1 aria-label="Quiz App">Quiz App</h1>
+    </header>
+    <main class="container-padding">
+      <ul class="cards-list">
+        <li>
+          <article class="card">
+            <h2 class="content">What property flips the axes in flexbox?</h2>
+            <button class="card-answer">Show answer</button>
+            <p>flex-direction</p>
+            <ul class="tags">
+              <li><a class="hashtag-frontend" href="#test">#html</a></li>
+              <li><a class="hashtag-frontend" href="#test">#flexbox</a></li>
+              <li><a class="hashtag-frontend" href="#test">#css</a></li>
+            </ul>
+            <button class="bookmark-button" aria-label="Bookmark">
+              <img src="assets/bookmark.svg" alt="Bookmark" class="bookmark" />
+            </button>
+          </article>
+        </li>
+        <li>
+          <article class="card">
+            <h2 class="content">Lorem Ipsum dolor sit?</h2>
+            <button class="card-answer">Show answer</button>
+            <button class="bookmark-button" aria-label="Bookmark">
+              <img src="assets/bookmark.svg" alt="Bookmark" class="bookmark" />
+            </button>
+          </article>
+        </li>
+        <li>
+          <article class="card">
+            <h2 class="content">Lorem Ipsum dolor sit?</h2>
+            <button class="card-answer">Show answer</button>
+            <button class="bookmark-button" aria-label="Bookmark">
+              <img src="assets/bookmark.svg" alt="Bookmark" class="bookmark" />
+            </button>
+          </article>
+        </li>
       </ul>
-    </div>
-  </footer>
+    </main>
+    <footer>
+      <nav class="navbar" aria-label="Navigation">
+        <ul class="navbar-ul">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#bookmark">Bookmark</a></li>
+          <li><a href="./profile.html">Profile</a></li>
+        </ul>
+      </nav>
+    </footer>
   </body>
 </html>
