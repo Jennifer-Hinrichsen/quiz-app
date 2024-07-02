@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="index.js" defer></script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz App</title>
   </head>
   <body>
     <header class="header">
-      <h1 aria-label="Quiz App">Quiz App</h1>
+      <h1 class="header__title" aria-label="Profile">Profile</h1>
     </header>
     <main class="container-padding">
       <ul class="cards-list">
@@ -46,10 +47,8 @@
         <li>
           <article class="card">
             <h2 class="content">Lorem Ipsum dolor sit?</h2>
-            <div class="container">
-              <button class="toggle-button">Toggle Answer</button>
-              <p class="answer">This is the answer!</p>
-            </div>
+            <button class="card-answer">Show answer</button>
+            <p>flex-direction</p>
             <ul class="tags">
               <li><a class="hashtag-frontend" href="#test">#html</a></li>
               <li><a class="hashtag-frontend" href="#test">#flexbox</a></li>
@@ -95,7 +94,7 @@
           </li>
           <li>
             <a href="./form.html"
-              ><img src="assets/form.svg" alt="form" class="footer-icon"
+              ><img src="assets/profile.svg" alt="form" class="footer-icon"
             /></a>
           </li>
           <li>
