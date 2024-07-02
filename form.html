@@ -13,11 +13,11 @@
       <h1 aria-label="Quiz App Form">Quiz App Form</h1>
     </header>
     <main class="container-padding">
-      <form class="question-form" id="question-form">
+      <form class="question-form" data-js="question-form">
         <div class="form-group">
           <label for="question">Your question:</label>
           <textarea
-            id="question"
+            data-js="question"
             name="question"
             maxlength="20"
             rows="6"
@@ -27,7 +27,7 @@
         <div class="form-group">
           <label for="answer">Your answer:</label>
           <textarea
-            id="answer"
+            data-js="answer"
             name="answer"
             maxlength="20"
             rows="6"
@@ -36,11 +36,11 @@
         </div>
         <div class="form-group">
           <label for="tag">Tag:</label>
-          <input type="text" id="tag" name="tag" required />
+          <input type="text" data-js="tag" name="tag" required />
         </div>
         <button type="submit" class="submit-button">Submit</button>
       </form>
-      <div id="new-card-container"></div>
+      <div data-js="new-card-container"></div>
     </main>
     <footer>
       <nav class="navbar" aria-label="Navigation">
