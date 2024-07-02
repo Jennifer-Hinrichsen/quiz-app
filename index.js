@@ -25,17 +25,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Toggle button //
 
-document.addEventListener("DOMContentLoaded", () => {
-  const toggleButton = document.querySelector(".toggle-button");
-  const answerParagraph = document.querySelector(".answer");
+const toggleButton = document.querySelector(".toggle-button");
+const answerParagraph = document.querySelector(".answer");
 
-  toggleButton.addEventListener("click", () => {
-    answerParagraph.classList.toggle("show-answer");
-    if (answerParagraph.classList.contains("show-answer")) {
-      toggleButton.textContent = "Hide answer";
-    } else {
-      toggleButton.textContent = "Show answer";
-    }
-  });
+toggleButton.addEventListener("click", () => {
+  answerParagraph.classList.toggle("show-answer");
+  if (answerParagraph.classList.contains("show-answer")) {
+    toggleButton.textContent = "Hide answer";
+  } else {
+    toggleButton.textContent = "Show answer";
+  }
 });
+
 // Toggle Button end //
