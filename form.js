@@ -13,60 +13,65 @@ Append the card to the page, directly below the form
 Note: To avoid error messages, we recommend creating a new JavaScript file specifically for your form page. This ensures that any event listeners you've added for other pages won't cause problems with HTML elements that aren't present on the form page.
 */
 
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("question-form");
-  const newCardContainer = document.getElementById("new-card-container");
+const form = document.querySelector('[data-js="question-form"]');
+const newCardContainer = document.querySelector(
+  '[data-js="new-card-container"]'
+);
 
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
 
-    const question = document.getElementById("question").value;
-    const answer = document.getElementById("answer").value;
-    const tag = document.getElementById("tag").value;
+  // const question = document.getElementById("question").value;
+  const question = document.querySelector('[data-js="question"]').value;
 
-    // Create a new card //
-    const card = document.createElement("article");
-    card.classList.add("card");
+  //const answer = document.getElementById("answer").value;
+  const answer = document.querySelector('[data-js="answer"]').value;
 
-    const questionElement = document.createElement("h2");
-    questionElement.classList.add("content");
-    questionElement.textContent = question;
+  //const tag = document.getElementById("tag").value;
+  const tag = document.querySelector('[data-js="tag"]').value;
 
-    const answerContainer = document.createElement("div");
-    answerContainer.classList.add("container");
+  // Create a new card //
+  const card = document.createElement("article");
+  card.classList.add("card");
 
-    const toggleButton = document.createElement("button");
-    toggleButton.classList.add("toggle-button");
-    toggleButton.textContent = "Toggle Answer";
-    toggleButton.addEventListener("click", () => {
-      answerElement.classList.toggle("show-answer");
-    });
+  const questionElement = document.createElement("h2");
+  questionElement.classList.add("content");
+  questionElement.textContent = question;
 
-    const answerElement = document.createElement("p");
-    answerElement.classList.add("answer");
-    answerElement.textContent = answer;
+  const answerContainer = document.createElement("div");
+  answerContainer.classList.add("container");
 
-    answerContainer.appendChild(toggleButton);
-    answerContainer.appendChild(answerElement);
-
-    const tagList = document.createElement("ul");
-    tagList.classList.add("tags");
-
-    const tagItem = document.createElement("li");
-    const tagLink = document.createElement("a");
-    tagLink.classList.add("hashtag-frontend");
-    tagLink.href = "#";
-    tagLink.textContent = `#${tag}`;
-
-    tagItem.appendChild(tagLink);
-    tagList.appendChild(tagItem);
-
-    card.appendChild(questionElement);
-    card.appendChild(answerContainer);
-    card.appendChild(tagList);
-
-    newCardContainer.appendChild(card);
-
-    // form.reset(); //
+  const toggleButton = document.createElement("button");
+  toggleButton.classList.add("toggle-button");
+  toggleButton.textContent = "Toggle Answer";
+  toggleButton.addEventListener("click", () => {
+    answerElement.classList.toggle("show-answer");
   });
+
+  const answerElement = document.createElement("p");
+  answerElement.classList.add("answer");
+  answerElement.textContent = answer;
+
+  answerContainer.appendChild(toggleButton);
+  answerContainer.appendChild(answerElement);
+
+  const tagList = document.createElement("ul");
+  tagList.classList.add("tags");
+
+  const tagItem = document.createElement("li");
+  const tagLink = document.createElement("a");
+  tagLink.classList.add("hashtag-frontend");
+  tagLink.href = "#";
+  tagLink.textContent = `#${tag}`;
+
+  tagItem.appendChild(tagLink);
+  tagList.appendChild(tagItem);
+
+  card.appendChild(questionElement);
+  card.appendChild(answerContainer);
+  card.appendChild(tagList);
+
+  newCardContainer.appendChild(card);
+
+  form.reset();
 });
