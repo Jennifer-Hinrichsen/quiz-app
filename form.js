@@ -21,13 +21,8 @@ const newCardContainer = document.querySelector(
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  // const question = document.getElementById("question").value;
   const question = document.querySelector('[data-js="question"]').value;
-
-  //const answer = document.getElementById("answer").value;
   const answer = document.querySelector('[data-js="answer"]').value;
-
-  //const tag = document.getElementById("tag").value;
   const tag = document.querySelector('[data-js="tag"]').value;
 
   // Create a new card //
