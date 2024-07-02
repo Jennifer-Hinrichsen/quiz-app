@@ -38,15 +38,15 @@ h1 {
 .card h2 {
   margin-top: 0;
 }
-.card-answer + p {
-  display: none;
-  margin-bottom: 2rem;
-}
 .content {
   padding: 20px 18px;
   font-size: 24px;
   margin-bottom: 0px;
   text-align: left;
+}
+.container {
+  text-align: center;
+  margin-top: 20px;
 }
 .tags {
   list-style: none;
@@ -98,17 +98,13 @@ h1 {
   width: 32px;
   height: 32px;
 }
-
-.card-answer {
+.toggle-button {
   color: cadetblue;
   background-color: blanchedalmond;
   padding: 8px 12px;
   border: 1px solid grey;
   font-size: 16px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-.card-answerToggle {
-  display: none;
 }
 footer {
   position: fixed;
@@ -128,9 +124,9 @@ footer {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   gap: 20%;
 }
-#hidden {
-  display: none;
-}
 .answer {
   display: none;
+}
+.show-answer {
+  display: block;
 }

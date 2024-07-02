@@ -30,6 +30,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   toggleButton.addEventListener("click", () => {
     answerParagraph.classList.toggle("show-answer");
+    if (answerParagraph.classList.contains("show-answer")) {
+      toggleButton.textContent = "Hide answer";
+    } else {
+      toggleButton.textContent = "Show answer";
+    }
   });
 });
 
