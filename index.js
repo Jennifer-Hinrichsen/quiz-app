@@ -21,8 +21,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-//* bookmark end*//
-//* toggle button
+//  Bookmark end  //
+
+// Toggle button //
 
 document.addEventListener("DOMContentLoaded", () => {
   const toggleButton = document.querySelector(".toggle-button");
@@ -37,5 +38,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+// Toggle Button end //
 
-//* end toggle button *//
+// Active Menu Item Highlight //
+const currentLocation = window.location.href;
+const menuItems = document.querySelectorAll(".navbar-ul a");
+
+menuItems.forEach((item) => {
+  if (item.href === currentLocation) {
+    item.classList.add("active");
+  }
+});
+// Active Menu Item Highlight end //
+
+//  New Card Forms //
+// New Card Forms end //
