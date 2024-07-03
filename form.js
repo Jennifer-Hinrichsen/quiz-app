@@ -13,14 +13,25 @@ Append the card to the page, directly below the form
 Note: To avoid error messages, we recommend creating a new JavaScript file specifically for your form page. This ensures that any event listeners you've added for other pages won't cause problems with HTML elements that aren't present on the form page.
 */
 //  Count Characters  //
-function textCount(textarea) {
-  const textSpan = document.querySelector(
-    `[data-js="${textarea.getAttribute("data-js")}-text-count"]`
-  );
+const questionTextarea = document.querySelector('[data-js="question"]');
+const answerTextarea = document.querySelector('[data-js="answer"]');
+const questionTextCount = document.querySelector(
+  '[data-js="question-text-count"]'
+);
+const answerTextCount = document.querySelector('[data-js="answer-text-count"]');
+
+function updateTextCount(textarea, textCountSpan) {
   const maxLength = textarea.maxLength;
   const currentLength = textarea.value.length;
-  textSpan.textContent = maxLength - currentLength + " characters left";
+  textCountSpan.textContent = `${maxLength - currentLength} characters left`;
 }
+
+questionTextarea.addEventListener("input", () =>
+  updateTextCount(questionTextarea, questionTextCount)
+);
+answerTextarea.addEventListener("input", () =>
+  updateTextCount(answerTextarea, answerTextCount)
+);
 // end Count Characters //
 
 const form = document.querySelector('[data-js="question-form"]');
