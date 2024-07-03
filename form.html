@@ -1,90 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="styles.css" />
-    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="form.js" defer></script>
+    <script src="menu.js" defer></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz App</title>
   </head>
   <body>
     <header class="header">
-      <h1 aria-label="Quiz App">Quiz App</h1>
+      <h1 aria-label="Quiz App Form">Quiz App Form</h1>
     </header>
     <main class="container-padding">
-      <ul class="cards-list">
-        <li>
-          <article class="card">
-            <h2 class="content">What property flips the axes in flexbox?</h2>
-            <button class="card-answer">Show answer</button>
-            <p>flex-direction</p>
-            <ul class="tags">
-              <li><a class="hashtag-frontend" href="#test">#html</a></li>
-              <li><a class="hashtag-frontend" href="#test">#flexbox</a></li>
-              <li><a class="hashtag-frontend" href="#test">#css</a></li>
-            </ul>
-            <button
-              class="bookmark-button"
-              aria-label="Bookmark"
-              data-js="bookmark-button"
-            >
-              <img src="assets/bookmark.svg" alt="Bookmark" class="bookmark" />
-            </button>
-            <button
-              class="bookmark-button--filled"
-              aria-label="Bookmark filled"
-              data-js="bookmark-button--filled"
-            >
-              <img
-                src="assets/bookmark-filled.svg"
-                alt="Bookmark-filled"
-                class="bookmark--filled"
-              />
-            </button>
-          </article>
-        </li>
-        <li>
-          <article class="card">
-            <h2 class="content">Lorem Ipsum dolor sit?</h2>
-            <button class="card-answer">Show answer</button>
-            <p>flex-direction</p>
-            <ul class="tags">
-              <li><a class="hashtag-frontend" href="#test">#html</a></li>
-              <li><a class="hashtag-frontend" href="#test">#flexbox</a></li>
-              <li><a class="hashtag-frontend" href="#test">#css</a></li>
-            </ul>
-            <button
-              class="bookmark-button"
-              aria-label="Bookmark"
-              data-js="bookmark-button"
-            >
-              <img src="assets/bookmark.svg" alt="Bookmark" class="bookmark" />
-            </button>
-            <button
-              class="bookmark-button--filled"
-              aria-label="Bookmark filled"
-              data-js="bookmark-button--filled"
-            >
-              <img
-                src="assets/bookmark-filled.svg"
-                alt="Bookmark-filled"
-                class="bookmark--filled"
-              />
-            </button>
-          </article>
-        </li>
-      </ul>
+      <form class="question-form" data-js="question-form">
+        <div class="form-group">
+          <label for="question">Your question:</label>
+          <textarea
+            data-js="question"
+            name="question"
+            maxlength="150"
+            rows="6"
+            oninput="updateTextCount(this)"
+            required
+          ></textarea>
+          <span data-js="question-text-count" class="text-count"
+            >50 characters left</span
+          ><br /><br />
+        </div>
+        <div class="form-group">
+          <label for="answer">Your answer:</label>
+          <textarea
+            data-js="answer"
+            name="answer"
+            maxlength="150"
+            rows="6"
+            required
+          ></textarea>
+          <span>50 characters left</span>
+        </div>
+        <div class="form-group">
+          <label for="tag">Tag:</label>
+          <input type="text" data-js="tag" name="tag" required />
+        </div>
+        <button type="submit" class="submit-button">Submit</button>
+      </form>
+      <div data-js="new-card-container"></div>
     </main>
     <footer>
       <nav class="navbar" aria-label="Navigation">
         <ul class="navbar-ul">
           <li>
-            <a href="./index.html"
+            <a href="index.html"
               ><img src="assets/home.svg" alt="home" class="footer-icon"
             /></a>
           </li>
           <li>
-            <a href="./bookmark.html"
+            <a href="bookmark.html"
               ><img
                 src="assets/bookmark.svg"
                 alt="Bookmark"
@@ -92,12 +64,12 @@
             /></a>
           </li>
           <li>
-            <a href="./form.html"
-              ><img src="assets/profile.svg" alt="form" class="footer-icon"
+            <a href="form.html"
+              ><img src="assets/form.svg" alt="form" class="footer-icon"
             /></a>
           </li>
           <li>
-            <a href="./profile.html"
+            <a href="profile.html"
               ><img src="assets/profile.svg" alt="profile" class="footer-icon"
             /></a>
           </li>

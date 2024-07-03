@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <script src="index.js" defer></script>
+    <script src="form.js" defer></script>
+    <script src="menu.js" defer></script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz App</title>
@@ -16,8 +19,10 @@
         <li>
           <article class="card">
             <h2 class="content">What property flips the axes in flexbox?</h2>
-            <button class="card-answer">Show answer</button>
-            <p>flex-direction</p>
+            <div class="container">
+              <button class="toggle-button">Show answer</button>
+              <p class="answer">flex-direction</p>
+            </div>
             <ul class="tags">
               <li><a class="hashtag-frontend" href="#test">#html</a></li>
               <li><a class="hashtag-frontend" href="#test">#flexbox</a></li>
@@ -47,7 +52,7 @@
           <article class="card">
             <h2 class="content">Lorem Ipsum dolor sit?</h2>
             <div class="container">
-              <button class="toggle-button">Toggle Answer</button>
+              <button class="toggle-button">Show answer</button>
               <p class="answer">This is the answer!</p>
             </div>
             <ul class="tags">
@@ -81,12 +86,12 @@
       <nav class="navbar" aria-label="Navigation">
         <ul class="navbar-ul">
           <li>
-            <a href="#home"
+            <a href="index.html"
               ><img src="assets/home.svg" alt="home" class="footer-icon"
             /></a>
           </li>
           <li>
-            <a href="#bookmark"
+            <a href="bookmark.html"
               ><img
                 src="assets/bookmark.svg"
                 alt="Bookmark"
@@ -94,12 +99,12 @@
             /></a>
           </li>
           <li>
-            <a href="./form.html"
+            <a href="form.html"
               ><img src="assets/form.svg" alt="form" class="footer-icon"
             /></a>
           </li>
           <li>
-            <a href="./profile.html"
+            <a href="profile.html"
               ><img src="assets/profile.svg" alt="profile" class="footer-icon"
             /></a>
           </li>
