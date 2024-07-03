@@ -19,8 +19,9 @@
           <textarea
             data-js="question"
             name="question"
-            maxlength="20"
+            maxlength="150"
             rows="6"
+            oninput="updateTextCount(this)"
             required
           ></textarea>
           <span data-js="question-text-count" class="text-count"
@@ -32,13 +33,11 @@
           <textarea
             data-js="answer"
             name="answer"
-            maxlength="20"
+            maxlength="150"
             rows="6"
             required
           ></textarea>
-          <span data-js="question-text-count" class="text-count"
-            >50 characters left</span
-          >
+          <span>50 characters left</span>
         </div>
         <div class="form-group">
           <label for="tag">Tag:</label>
